@@ -1,10 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>相册</title>
+    <link rel="stylesheet" type="text/css" href="../css/album.css"/>
+<script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<title>相册</title>
 </head>
 <body>
 
+
+	<div id="conMain">
+		<div class="ctrl">
+    		<ul>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li><a href="javascript:alert('链接1');"></a></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    		</ul>
+    	</div>
+		<div class="canvas">
+			<div class="vi"><img class="img" src="img/box.png"/></a></div>
+			<div class="vi"><img class="img" src="img/compass.png"/></a></div>
+			<div class="vi"><img class="img" src="img/computer.png"/></a></div>
+			<div class="vi"><img class="img" src="img/disc.png"/></a></div>
+			<div class="vi"><img class="img" src="img/dj_music.png"/></a></div>
+			<div class="vi"><img class="img" src="img/download.png"/></a></div>
+			<div class="vi"><img class="img" src="img/pen_holder.png"/></a></div>
+			<div class="vi"><img class="img" src="img/flask.png"/></a></div>
+			<div class="vi"><img class="img" src="img/folder.png"/></a></div>
+		</div>
+	</div>
+
+<script>
+$(function(){
+	var jiaodu=0;
+	var cv=$('.canvas');
+	var timer01,timer02,timer03,timer04,timer06,timer07,timer08,timer09;
+	var liCtrl = $('li');
+	liCtrl.eq(0).mouseenter(function(){
+		clearIN();
+		timer01=setInterval(function(){
+			jdl()
+			cv.css({transform:'rotateY('+jiaodu+'deg)'});
+		},1);
+	});
+	liCtrl.eq(1).mouseenter(function(){
+		clearIN();
+		timer02=setInterval(function(){
+			jdl()
+			cv.css({transform:'rotateY('+jiaodu+'deg)'});
+		},8);
+	});
+	liCtrl.eq(2).mouseenter(function(){
+		clearIN();
+		timer03=setInterval(function(){
+			jdl()
+			cv.css({transform:'rotateY('+jiaodu+'deg)'});
+		},20);
+	});
+	liCtrl.eq(3).mouseenter(function(){
+		clearIN();
+		timer04=setInterval(function(){
+			jdl()
+			cv.css({transform:'rotateY('+jiaodu+'deg)'});
+		},35);
+	});
+	liCtrl.eq(4).mouseenter(function(){
+		clearIN();
+		var rotaxDeg=cv[0].style.transform;
+		var xDeg=rotaxDeg.substring(8);
+		var deg=xDeg.substring(xDeg.length-4);
+		var x=parseInt(xDeg.replace(deg,''));
+		if(x>-10&&x<10){
+			liCtrl.eq(4).find('a')[0].href=$('.vi').eq(0).find('a')[0].href;
+		}else if(x>-50&&x<-30 || x>310&&x<330){
+			liCtrl.eq(4).find('a')[0].href=$('.vi').eq(1).find('a')[0].href;
+		}else if(x>-90&&x<-70 || x>270&&x<290){
+			liCtrl.eq(4).find('a')[0].href=$('.vi').eq(2).find('a')[0].href;
+		}else if(x>-130&&x<-110 || x>230&&x<250){
+			liCtrl.eq(4).find('a')[0].href=$('.vi').eq(3).find('a')[0].href;
+		}else if(x>-170&&x<-150 || x>190&&x<210){
+			liCtrl.eq(4).find('a')[0].href=$('.vi').eq(4).find('a')[0].href;
+		}else if(x>-210&&x<-190 || x>150&&x<170){
+			liCtrl.eq(4).find('a')[0].href=$('.vi').eq(5).find('a')[0].href;
+		}else if(x>-250&&x<-230 || x>110&&x<130){
+			liCtrl.eq(4).find('a')[0].href=$('.vi').eq(6).find('a')[0].href;
+		}else if(x>-290&&x<-270 || x>70&&x<90){
+			liCtrl.eq(4).find('a')[0].href=$('.vi').eq(7).find('a')[0].href;
+		}else if(x>-330&&x<-310 || x>30&&x<50){
+			liCtrl.eq(4).find('a')[0].href=$('.vi').eq(8).find('a')[0].href;
+		}else{
+			liCtrl.eq(4).find('a')[0].href="javascript:alert('空链接')";
+		}
+	});
+	liCtrl.eq(5).mouseenter(function(){
+		clearIN();
+		timer06=setInterval(function(){
+			jdr();
+			cv.css({transform:'rotateY('+jiaodu+'deg)'});
+		},35);
+	});
+	liCtrl.eq(6).mouseenter(function(){
+		clearIN();
+		timer07=setInterval(function(){
+			jdr();
+			cv.css({transform:'rotateY('+jiaodu+'deg)'});
+		},20);
+	});
+	liCtrl.eq(7).mouseenter(function(){
+		clearIN();
+		timer08=setInterval(function(){
+			jdr();
+			cv.css({transform:'rotateY('+jiaodu+'deg)'});
+		},8);
+	});
+	liCtrl.eq(8).mouseenter(function(){
+		clearIN();
+		timer09=setInterval(function(){
+			jdr();
+			cv.css({transform:'rotateY('+jiaodu+'deg)'});
+		},1);
+	});
+	function jdl(){
+		jiaodu++;
+			if(jiaodu==360){
+				jiaodu=0;
+			}
+	}
+	function jdr(){
+		jiaodu--;
+			if(jiaodu==-360){
+				jiaodu=0;
+			}
+	}
+	function clearIN(){
+		clearInterval(timer01);
+		clearInterval(timer02);
+		clearInterval(timer03);
+		clearInterval(timer04);
+		clearInterval(timer06);
+		clearInterval(timer07);
+		clearInterval(timer08);
+		clearInterval(timer09);
+	}
+})
+</script>
 </body>
 </html>
