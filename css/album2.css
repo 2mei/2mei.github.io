@@ -8,7 +8,7 @@
 	right: 60px;
 	left: 60px;
 	height: 100vh;
-	background: url(../img/deco.svg) no-repeat center top;
+	/*background: url(../resource/1.gif) no-repeat center top;*/
 	background-size: 100%;
 }
 
@@ -43,22 +43,6 @@
 	visibility: visible;
 }
 
-.deco--circle {
-	position: absolute;
-	top: 0;
-	border-radius: 50%;
-	background: #fff;
-}
-
-.deco--circle-left {
-	right: calc(100% - 140px);
-}
-
-.deco--circle-right {
-	left: calc(100% - 140px);
-}
-
-.deco--circle,
 .slide__inner {
 	width: 450px;
 	height: 450px;
@@ -150,9 +134,10 @@
 }
 
 .slide__img--large {
-	height: 50vh;
-	max-height: 400px;
-	margin: 0 auto 3em;
+
+	height:100%;
+	width:100%;
+
 }
 
 .action {
