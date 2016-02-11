@@ -124,7 +124,11 @@ Main components
   margin-top: -12px;
 }
 .cd-timeline-img.cd-picture {
+  z-index:800;
   background: #75ce66;
+}
+.cd-timeline-img.cd-picture:hover {
+  z-index:999;
 }
 .cd-timeline-img.cd-movie {
   background: #c03b44;
