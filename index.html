@@ -1,16 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>梅子和老二</title>
+	<title>梅子和老二</title>
+	<!--fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<!--//fonts-->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Kong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //for-mobile-apps -->
+	<!-- js -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+	<!-- js -->
+
+
 </head>
 <body>
-	<!-- 	背景音乐 -->
+<!-- 	背景音乐 -->
 	<audio autoplay="autopaly">
 		<source src="resource/music/终于等到你.mp3" type="audio/mp3">
 	</audio>
+<!-- banner -->
+<div class="banner" id="home">
+	<div class="container">
+		<div class="top-header row">
+			<!--top-nav---->
+			<div class="logo">
+				<a href="index.html"><img src="" alt=""/></a>
+			</div>
+			<div class="top-nav">
+				<div class="nav-icon">
+					    <a href="#" class="right_bt" id="activator"><span> </span> </a>
+				</div>
+				<div class="box" id="box">
+					<div class="box_content">
+						<div class="box_content_center">
+							<div class="form_content">
+								<div class="menu_box_list">
+									<ul>
+										<li><a class="scroll" href="html/timeline.html" target="_blank"><span>时光轴</span></a></li>
+										<li><a class="scroll" href="html/album2.html" target="_blank"><span>相册</span></a></li>
+										<div class="clearfix"> </div>
+									</ul>
+								</div>
+								<a class="boxclose" id="boxclose"> <span> </span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!---start-click-drop-down-menu----->
+			        <!----start-dropdown--->
+			         <script type="text/javascript">
+						var $ = jQuery.noConflict();
+							$(function() {
+								$('#activator').click(function(){
+									$('#box').animate({'top':'0px'},900);
+								});
+								$('#boxclose').click(function(){
+								$('#box').animate({'top':'-1000px'},900);
+								});
+							});
+							$(document).ready(function(){
+							//Hide (Collapse) the toggle containers on load
+							$(".toggle_container").hide();
+							//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+							$(".trigger").click(function(){
+								$(this).toggleClass("active").next().slideToggle("slow");
+									return false; //Prevent the browser jump to the link anchor
+							});
 
-   <a href="html/timeline.html" target="_blank">时光轴</a>
-   <a href="html/album2.html" target="_blank">相册</a>
+						});
+					</script>
+			<!---//End-click-drop-down-menu----->
+			<div class="clearfix"> </div>
+		</div>
+		<div class="banner-info">
+			<div class="banner-left">
+				<img src="resource/img/1.jpg"  style="height:200px;width:200px"  alt=""/>
+			</div>
+			<div class="banner-right">
+				<h2>2mei.pw</h2>
+				<div class="border"></div>
+				<h1>梅子和老二的网站</h1>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--/header-banner-->
+
 </body>
 </html>
