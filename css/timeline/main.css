@@ -10,7 +10,7 @@ body{height:100%; font:14px/18px "Microsoft Yahei", Tahoma, Helvetica, Arial, Ve
 img{border:none}
 
 
-#header{width:980px; height:90px; margin:0px auto; position:relative;}
+#header{width:980px; height:220px; margin:0px auto; position:relative;}
 
 
 #main{width:980px; min-height:600px; margin:30px auto 0 auto; border:1px solid #d3d3d3; background:#fff; -moz-border-radius:5px;-khtml-border-radius: 5px;-webkit-border-radius: 5px; border-radius:5px;}

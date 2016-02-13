@@ -1,10 +1,10 @@
-img{
+#cd-timeline img{
 -webkit-transition:all 1s;
 -moz-transition:all 1s;
 -o-transition:all 1s;
 }
 
-img:hover{
+#cd-timeline img:hover{
 -webkit-transform:scale(20) rotate(10deg);
 -moz-transform:scale(20) rotate(10deg);
 -o-transform:scale(20) rotate(10deg);
